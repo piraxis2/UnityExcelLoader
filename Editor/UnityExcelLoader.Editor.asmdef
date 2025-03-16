@@ -1,0 +1,16 @@
+{
+    "name": "UnityExcelLoader.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:ae912a2fc574aa541843ee02acf19d09"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

@@ -1,0 +1,23 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityExcelLoader.Runtime;
+
+//DoNotRemove CustomUsing Start End Annotation
+//CustomUsingStart
+{CustomUsing}
+
+//CustomUsingEnd
+namespace UnityExcelLoader
+{
+	[ExcelScriptableObject]
+	public class {ClassName} : ScriptableObject
+	{
+		public List< {Entity} > Data;
+//DoNotRemove Methods Start End Annotation
+//MethodsStart
+		{Methods}
+//MethodsEnd
+	}
+}

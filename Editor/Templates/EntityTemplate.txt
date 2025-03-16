@@ -1,0 +1,22 @@
+using System;
+using System.Collections.Generic;
+using UnityEngine;
+
+//DoNotRemove CustomUsing Start End Annotation
+//CustomUsingStart
+{CustomUsing}
+//CustomUsingEnd
+
+namespace UnityExcelLoader
+{
+	[Serializable]
+	public class {ClassName}
+	{
+		{Fields}
+
+//DoNotRemove Methods Start End Annotation
+//MethodsStart
+		{Methods}
+//MethodsEnd
+	}
+}

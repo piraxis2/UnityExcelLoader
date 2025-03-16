@@ -1,0 +1,11 @@
+{
+  "name": "com.piraxis.unity_excel_loader",
+  "version": "0.0.1",
+  "displayName": "UnityExcelLoader",
+  "description": "Extension for auto import data from excel",
+  "unity": "2019.1",
+  "gitdependencies": {},
+  "author": {
+    "name": "piraxis"
+  }
+}
