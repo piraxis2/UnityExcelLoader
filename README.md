@@ -3,7 +3,7 @@
 [en](https://github.com/piraxis2/UnityExcelLoader/tree/main?tab=readme-ov-file#unityexcelloader_en)
 [kr](https://github.com/piraxis2/UnityExcelLoader/tree/main?tab=readme-ov-file#unityexcelloader_kr)
 
-# UnityExcelLoader_en
+# UnityExcelLoader
 
 UnityExcelLoader is a tool to convert Excel files into ScriptableObjects in Unity projects.
 
@@ -139,7 +139,7 @@ This project is distributed under the MIT License. See the `LICENSE` file for mo
 
 
 
-# UnityExcelLoader_kr
+# UnityExcelLoader
 
 UnityExcelLoader는 Unity 프로젝트에서 Excel 파일을 ScriptableObject로 변환하는 도구입니다.
 
