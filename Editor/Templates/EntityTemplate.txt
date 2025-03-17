@@ -12,7 +12,7 @@ namespace UnityExcelLoader
 	[Serializable]
 	public class {ClassName}
 	{
-		{Fields}
+	{Fields}
 
 //DoNotRemove Methods Start End Annotation
 //MethodsStart
