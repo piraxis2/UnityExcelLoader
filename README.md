@@ -1,7 +1,7 @@
 
 # Language
 [en](#-UnityExcelLoader_en)
-[kr](#-UnityExcelLoader_kr)
+[kr](https://github.com/piraxis2/UnityExcelLoader/tree/main?tab=readme-ov-file#unityexcelloader_kr)
 
 # UnityExcelLoader_en
 
