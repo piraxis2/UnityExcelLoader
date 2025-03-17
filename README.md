@@ -26,6 +26,7 @@ To install this package, add the following dependency to your `Packages/manifest
 1. Add the Excel file to your Unity project.
 2. Right-click the Excel file and select `Assets/Create/UnityExcelLoader/ExcelScript`.
 3. Choose the folder to save, and the corresponding ScriptableObject and Entity class will be generated.
+4. Note: If the first row or column contains `#`, the data in that row or column will not be generated.
 
 ### Use the generated ScriptableObject
 
@@ -46,9 +47,9 @@ using UnityExcelLoader.Runtime;
 namespace UnityExcelLoader
 {
     [ExcelScriptableObject]
-    public class Cube_Grade : ScriptableObject
+    public class Sample : ScriptableObject
     {
-        public List<Cube_Grade_Entity> Data;
+        public List<Sample_Entity> Data;
 
         //DoNotRemove Methods Start End Annotation
         //MethodsStart
@@ -56,7 +57,7 @@ namespace UnityExcelLoader
         {
             foreach (var entity in Data)
             {
-                Debug.Log($"Id: {entity.Id}, Grade: {entity.Grade}");
+                Debug.Log($"Id: {entity.Id}, Name: {entity.Name}");
             }
         }
         //MethodsEnd
@@ -66,9 +67,9 @@ namespace UnityExcelLoader
 
 ## Example
 
-### Cube_Grade ScriptableObject
+### Sample ScriptableObject
 
-`Cube_Grade` is an example of a ScriptableObject generated from an Excel file.
+`Sample` is an example of a ScriptableObject generated from an Excel file.
 
 ```csharp
 using System;
@@ -80,9 +81,9 @@ using UnityExcelLoader.Runtime;
 namespace UnityExcelLoader
 {
     [ExcelScriptableObject]
-    public class Cube_Grade : ScriptableObject
+    public class Sample : ScriptableObject
     {
-        public List<Cube_Grade_Entity> Data;
+        public List<Sample_Entity> Data;
 
         //DoNotRemove Methods Start End Annotation
         //MethodsStart
@@ -91,9 +92,9 @@ namespace UnityExcelLoader
 }
 ```
 
-### Cube_Grade_Entity class
+### Sample_Entity class
 
-`Cube_Grade_Entity` is the data entity class for the `Cube_Grade` ScriptableObject.
+`Sample_Entity` is the data entity class for the `Sample` ScriptableObject.
 
 ```csharp
 using System;
@@ -103,18 +104,12 @@ using UnityEngine;
 namespace UnityExcelLoader
 {
     [Serializable]
-    public class Cube_Grade_Entity
+    public class Sample_Entity
     {
         public int Id;
-        public int Grade;
-        public string Unit_String;
-        public string Value;
-        public string Cube_Color;
-        public string Txt_Color;
-        public bool Cube_Create;
-        public bool Cube_Add_Delete;
-        public int Cube_Min_Id;
-        public int Cube_Max_Id;
+        public string Name;
+        public float Chance;
+        public bool IsUse;
 
         //DoNotRemove Methods Start End Annotation
         //MethodsStart
@@ -123,13 +118,11 @@ namespace UnityExcelLoader
 }
 ```
 
+
 ## Contribution
 
 If you want to contribute, please fork this repository and send a pull request.
 
-## License
-
-This project is distributed under the MIT License. See the `LICENSE` file for more details.
 
 
 
@@ -162,6 +155,7 @@ UnityExcelLoader는 Unity 프로젝트에서 Excel 파일을 ScriptableObject로
 1. Unity 에디터에서 엑셀 파일을 프로젝트에 추가합니다.
 2. 엑셀 파일을 우클릭하고 `Assets/Create/UnityExcelLoader/ExcelScript` 메뉴를 선택합니다.
 3. 저장할 폴더를 선택하면, 엑셀 파일에 대응하는 ScriptableObject와 Entity 클래스가 생성됩니다.
+4. 참고: 첫 번째 행이나 열에 `#`가 포함되어 있으면 해당 행이나 열의 데이터는 생성되지 않습니다.
 
 ### 생성된 ScriptableObject 사용
 
@@ -182,9 +176,9 @@ using UnityExcelLoader.Runtime;
 namespace UnityExcelLoader
 {
     [ExcelScriptableObject]
-    public class Cube_Grade : ScriptableObject
+    public class Sample : ScriptableObject
     {
-        public List<Cube_Grade_Entity> Data;
+        public List<Sample_Entity> Data;
 
         //DoNotRemove Methods Start End Annotation
         //MethodsStart
@@ -192,7 +186,7 @@ namespace UnityExcelLoader
         {
             foreach (var entity in Data)
             {
-                Debug.Log($"Id: {entity.Id}, Grade: {entity.Grade}");
+                Debug.Log($"Id: {entity.Id}, Name: {entity.Name}");
             }
         }
         //MethodsEnd
@@ -202,9 +196,9 @@ namespace UnityExcelLoader
 
 ## 예제
 
-### Cube_Grade ScriptableObject
+### Sample ScriptableObject
 
-`Cube_Grade`는 Excel 파일에서 생성된 ScriptableObject의 예제입니다.
+`Sample`는 Excel 파일에서 생성된 ScriptableObject의 예제입니다.
 
 ```csharp
 using System;
@@ -216,9 +210,9 @@ using UnityExcelLoader.Runtime;
 namespace UnityExcelLoader
 {
     [ExcelScriptableObject]
-    public class Cube_Grade : ScriptableObject
+    public class Sample : ScriptableObject
     {
-        public List<Cube_Grade_Entity> Data;
+        public List<Sample_Entity> Data;
 
         //DoNotRemove Methods Start End Annotation
         //MethodsStart
@@ -227,9 +221,9 @@ namespace UnityExcelLoader
 }
 ```
 
-### Cube_Grade_Entity 클래스
+### Sample_Entity 클래스
 
-`Cube_Grade_Entity`는 `Cube_Grade` ScriptableObject의 데이터 엔티티 클래스입니다.
+`Sample_Entity`는 `Sample` ScriptableObject의 데이터 엔티티 클래스입니다.
 
 ```csharp
 using System;
@@ -239,18 +233,12 @@ using UnityEngine;
 namespace UnityExcelLoader
 {
     [Serializable]
-    public class Cube_Grade_Entity
+    public class Sample_Entity
     {
         public int Id;
-        public int Grade;
-        public string Unit_String;
-        public string Value;
-        public string Cube_Color;
-        public string Txt_Color;
-        public bool Cube_Create;
-        public bool Cube_Add_Delete;
-        public int Cube_Min_Id;
-        public int Cube_Max_Id;
+        public string Name;
+        public float Chance;
+        public bool IsUse;
 
         //DoNotRemove Methods Start End Annotation
         //MethodsStart
@@ -263,6 +251,3 @@ namespace UnityExcelLoader
 
 기여를 원하시면, 이 저장소를 포크하고 풀 리퀘스트를 보내주세요.
 
-## 라이선스
-
-이 프로젝트는 MIT 라이선스 하에 배포됩니다. 자세한 내용은 `LICENSE` 파일을 참조하세요.
