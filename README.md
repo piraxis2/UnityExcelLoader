@@ -35,7 +35,7 @@ To install this package, add the following dependency to your `Packages/manifest
 
 ### Add custom methods
 
-The generated ScriptableObject and Entity classes have a custom methods section. This section is located between the `//MethodsStart` and `//MethodsEnd` comments. You can add methods between these comments. For example, to add a custom method to the `Cube_Grade` class:
+The generated ScriptableObject and Entity classes have a custom methods section. This section is located between the `//MethodsStart` and `//MethodsEnd` comments. You can add methods between these comments. For example, to add a custom method to the `Sample` class:
 
 ```csharp
 using System;
@@ -164,7 +164,7 @@ UnityExcelLoader는 Unity 프로젝트에서 Excel 파일을 ScriptableObject로
 
 ### 커스텀 메소드 추가
 
-생성된 ScriptableObject와 Entity 클래스에는 개발자가 사용할 수 있는 커스텀 메소드 영역이 있습니다. 이 영역은 `//MethodsStart`와 `//MethodsEnd` 주석 사이에 위치하며, 이 주석 사이에 메소드를 추가할 수 있습니다. 예를 들어, `Cube_Grade` 클래스에 커스텀 메소드를 추가하려면 다음과 같이 작성할 수 있습니다:
+생성된 ScriptableObject와 Entity 클래스에는 개발자가 사용할 수 있는 커스텀 메소드 영역이 있습니다. 이 영역은 `//MethodsStart`와 `//MethodsEnd` 주석 사이에 위치하며, 이 주석 사이에 메소드를 추가할 수 있습니다. 예를 들어, `Sample` 클래스에 커스텀 메소드를 추가하려면 다음과 같이 작성할 수 있습니다:
 
 ```csharp
 using System;
