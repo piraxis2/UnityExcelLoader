@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 8
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36eb98621ba80e14b8b5d8aaf5830a1b, type: 3}
+  m_Name: Sample
+  m_EditorClassIdentifier: 
+  Data:
+  - Id: 1
+    Name: Bob
+    Chance: 0.1
+    IsUse: 0
+  - Id: 2
+    Name: John
+    Chance: 0.2
+    IsUse: 1
+  - Id: 3
+    Name: Jane
+    Chance: 0.3
+    IsUse: 0
+  - Id: 4
+    Name: Nick
+    Chance: 0.4
+    IsUse: 1
+  - Id: 5
+    Name: Kim
+    Chance: 0.5
+    IsUse: 0
+  - Id: 6
+    Name: Yeon
+    Chance: 0.6
+    IsUse: 0
