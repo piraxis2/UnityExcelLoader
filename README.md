@@ -123,9 +123,6 @@ namespace UnityExcelLoader
 
 If you want to contribute, please fork this repository and send a pull request.
 
-## License
-
-This project is distributed under the MIT License. See the `LICENSE` file for more details.
 
 
 
@@ -254,6 +251,3 @@ namespace UnityExcelLoader
 
 기여를 원하시면, 이 저장소를 포크하고 풀 리퀘스트를 보내주세요.
 
-## 라이선스
-
-이 프로젝트는 MIT 라이선스 하에 배포됩니다. 자세한 내용은 `LICENSE` 파일을 참조하세요.
