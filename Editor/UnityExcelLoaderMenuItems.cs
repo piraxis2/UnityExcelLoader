@@ -89,9 +89,10 @@ namespace UnityExcelLoader.Editor
                 {
                     var headerCell = headerRow.GetCell(j);
                     var typeCell = typeRow.GetCell(j);
+                    
+                    if (headerCell.StringCellValue.StartsWith("#")) continue;
 
-                    if (headerCell != null && headerCell.CellType != CellType.Blank &&
-                        typeCell != null && typeCell.CellType != CellType.Blank)
+                    if (headerCell != null && headerCell.CellType != CellType.Blank && typeCell != null && typeCell.CellType != CellType.Blank)
                     {
                         fieldsBuilder.AppendLine($"\t\tpublic {typeCell.StringCellValue} {headerCell.StringCellValue};");
                     }
