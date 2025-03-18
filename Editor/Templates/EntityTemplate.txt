@@ -7,16 +7,13 @@ using UnityEngine;
 {CustomUsing}
 //CustomUsingEnd
 
-namespace UnityExcelLoader
-{
-	[Serializable]
-	public class {ClassName}
-	{
-	{Fields}
 
+[Serializable]
+public class {ClassName}
+{
+{Fields}
 //DoNotRemove Methods Start End Annotation
 //MethodsStart
-		{Methods}
+{Methods}
 //MethodsEnd
-	}
 }

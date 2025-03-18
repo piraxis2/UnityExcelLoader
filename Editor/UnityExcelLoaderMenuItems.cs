@@ -46,9 +46,16 @@ namespace UnityExcelLoader.Editor
             CreateScriptableObject(excelDirectoryData);
             AssetDatabase.Refresh();
         }
-        
+
         [MenuItem("Assets/Create/UnityExcelLoader/ExcelScriptableObject", true)]
-        private static bool IsValidateCreateExcelScriptableObject() => IsExcel();
+        private static bool IsValidateCreateExcelScriptableObject()
+        {
+            var selectedAssets = Selection.GetFiltered(typeof(UnityEngine.Object), SelectionMode.Assets);
+            var excelPath = AssetDatabase.GetAssetPath(selectedAssets[0]);
+            var excelName = Path.GetFileNameWithoutExtension(excelPath);
+            var entityType = Type.GetType($"{excelName}_Entity, Assembly-CSharp");
+            return IsExcel() && entityType != null;
+        }
 
 
         private static void CreateScript(ExcelDirectoryData excelDirectoryData)
@@ -71,7 +78,7 @@ namespace UnityExcelLoader.Editor
                 var methodsEndIndex = existingContent.IndexOf("//MethodsEnd", StringComparison.Ordinal);
                 var existingMethods = existingContent.Substring(methodsStartIndex, methodsEndIndex - methodsStartIndex).Trim();
                 
-                classContent = classContent.Replace("{Methods}", "\t\t" + existingMethods);
+                classContent = classContent.Replace("{Methods}", "\t" + existingMethods);
                 
                 var customUsing =  existingContent.IndexOf("//CustomUsingStart", StringComparison.Ordinal) + "//CustomUsingStart".Length;
                 var customUsingEnd = existingContent.IndexOf("//CustomUsingEnd", StringComparison.Ordinal);
@@ -116,7 +123,7 @@ namespace UnityExcelLoader.Editor
 
                     if (headerCell.CellType != CellType.Blank && typeCell != null && typeCell.CellType != CellType.Blank)
                     {
-                        fieldsBuilder.AppendLine($"\t\tpublic {typeCell.StringCellValue} {headerCell.StringCellValue};");
+                        fieldsBuilder.AppendLine($"\tpublic {typeCell.StringCellValue} {headerCell.StringCellValue};");
                     }
                 }
 
@@ -131,7 +138,7 @@ namespace UnityExcelLoader.Editor
                     var methodsEndIndex = existingContent.IndexOf("//MethodsEnd", StringComparison.Ordinal);
                     var existingMethods = existingContent.Substring(methodsStartIndex, methodsEndIndex - methodsStartIndex).Trim();
 
-                    classContent = classContent.Replace("{Methods}", "\t\t" + existingMethods);
+                    classContent = classContent.Replace("{Methods}", "\t" + existingMethods);
 
                     var customUsing = existingContent.IndexOf("//CustomUsingStart", StringComparison.Ordinal) + "//CustomUsingStart".Length;
                     var customUsingEnd = existingContent.IndexOf("//CustomUsingEnd", StringComparison.Ordinal);
@@ -153,7 +160,7 @@ namespace UnityExcelLoader.Editor
         {
             var unityPath = excelDirectoryData.SavePath[excelDirectoryData.SavePath.LastIndexOf("Assets", StringComparison.Ordinal)..];
             var scriptableObjectPath = unityPath + $"/{excelDirectoryData.ExcelName}.asset";
-            var entityType = Type.GetType($"UnityExcelLoader.{excelDirectoryData.ExcelName}_Entity, Assembly-CSharp");
+            var entityType = Type.GetType($"{excelDirectoryData.ExcelName}_Entity, Assembly-CSharp");
 
             if (entityType == null)
             {
