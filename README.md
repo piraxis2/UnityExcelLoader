@@ -1,5 +1,3 @@
-# 문제가 생겨 고치고 있습니다.
-
 # Language
 [en](https://github.com/piraxis2/UnityExcelLoader/tree/main?tab=readme-ov-file#unityexcelloader)
 [kr](https://github.com/piraxis2/UnityExcelLoader/tree/main?tab=readme-ov-file#유니티엑셀로더)
