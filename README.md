@@ -13,7 +13,7 @@ To install this package, add the following dependency to your `Packages/manifest
 ```json
 {
   "dependencies": {
-    "com.piraxis2.unityexcelloader": "https://github.com/piraxis2/UnityExcelLoader.git"
+    "com.piraxis2.unityexcelloader": https://github.com/piraxis2/UnityExcelToScriptableObject.git
   }
 }
 ```
@@ -142,7 +142,7 @@ UnityExcelLoader는 Unity 프로젝트에서 Excel 파일을 ScriptableObject로
 ```json
 {
   "dependencies": {
-    "com.piraxis2.unityexcelloader": "https://github.com/piraxis2/UnityExcelLoader.git"
+    "com.piraxis2.unityexcelloader": https://github.com/piraxis2/UnityExcelToScriptableObject.git
   }
 }
 ```
