@@ -208,7 +208,12 @@ namespace UnityExcelLoader.Editor
                         
                         try
                         {
-                            var value = Convert.ChangeType(dataCell.CellType == CellType.Numeric ? dataCell.StringCellValue : dataCell.ToString(), field.FieldType);
+                            if (dataCell.CellType == CellType.Numeric)
+                            {
+                                dataCell.SetCellType(CellType.String);
+                            }
+
+                            var value = Convert.ChangeType(dataCell.ToString(), field.FieldType);
                             field.SetValue(entity, value);
                         }
                         catch (InvalidCastException)
