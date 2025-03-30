@@ -169,7 +169,7 @@ namespace UnityExcelLoader.Editor
             }
 
             var scriptableObject = ScriptableObject.CreateInstance(excelDirectoryData.ExcelName);
-            scriptableObject.hideFlags = HideFlags.NotEditable;
+            scriptableObject.hideFlags = HideFlags.None;
             var dataList = (IList)Activator.CreateInstance(typeof(List<>).MakeGenericType(entityType));
 
             using var stream = File.Open(excelDirectoryData.ExcelPath, FileMode.Open, FileAccess.Read, FileShare.ReadWrite);
