@@ -33,8 +33,6 @@ UnityExcelLoader는 Unity 에디터에서 Excel(.xls/.xlsx) 파일을 읽어 자
   - 코드(Directory.GetFiles)에서 현재 작업 디렉터리(프로젝트 루트 이하)를 재귀 검색하므로 템플릿 파일은 프로젝트에 포함되어 있어야 합니다.
 - (선택) Editor/Plugins 폴더에 DLL 배치(예: NPOI DLL)을 사용하거나 패키지 매니저로 추가
 
-주의: NPOI가 프로젝트에 없으면 컴파일 에러가 발생합니다. 필요한 NPOI DLL을 Editor/Plugins에 넣거나, 패키지로 설치하세요.
-
 ---
 
 ## 설치 방법
