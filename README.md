@@ -44,12 +44,6 @@ UnityExcelLoader는 Unity 에디터에서 Excel(.xls/.xlsx) 파일을 읽어 자
 ```
 또는 프로젝트에 직접 복사/임포트하세요.
 
-2. NPOI 의존성 추가:
-- Unity 패키지 매니저나 DLL(예: NPOI.dll / NPOI.OOXML.dll / NPOI.OpenXml4Net.dll 등)을 Editor/Plugins 에 넣어 컴파일될 수 있도록 합니다.
-- 레포지토리의 Editor/Plugins 폴더를 확인하세요(현재 폴더 존재는 확인됨). 필요한 DLL이 없는 경우 직접 추가해야 합니다.
-
-3. 템플릿 파일(ScriptTemplate.txt, EntityTemplate.txt)을 프로젝트 루트 또는 찾을 수 있는 위치에 넣습니다. (코드가 Directory.GetFiles로 검색합니다.)
-
 ---
 
 ## 사용법 (실제 레포지토리 동작 기준)
@@ -92,7 +86,7 @@ Validation(메뉴 활성화 조건)
 
 템플릿에 `//MethodsStart` / `//MethodsEnd`, `//CustomUsingStart` / `//CustomUsingEnd` 같은 주석 영역을 만들어 두면, 재생성 시 사용자가 작성한 커스텀 코드가 유지됩니다.
 
-예시(엔티티 템플릿 안에 들어갈 가능성)
+예시
 ```csharp
 //CustomUsingStart
 {CustomUsing}
